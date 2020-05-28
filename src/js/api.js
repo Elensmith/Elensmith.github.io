@@ -1,4 +1,4 @@
-class Api {
+export class Api {
   constructor(mainURL) {
     this.mainURL = mainURL;
   }

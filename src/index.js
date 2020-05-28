@@ -1,3 +1,12 @@
+import "./style.css";
+import { UserInfo } from "./js/userInfo.js";
+import { Popup, Photo } from "./js/popup.js";
+import { FormValidatorCard } from "./js/formValidatorCard.js";
+import { FormValidator } from "./js/FormValidator.js";
+import { CardList } from "./js/cardList.js";
+import { Card } from "./js/card.js";
+import { Api } from "./js/api.js";
+
 (function () {
   const newCard = document.querySelector(".places-list");
   const button = document.querySelector(".user-info__button");

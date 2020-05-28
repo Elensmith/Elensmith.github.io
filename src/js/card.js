@@ -1,4 +1,4 @@
-class Card {
+export class Card {
   constructor(name, link, toBigPicture, finderForCard, api) {
     this.api = api;
     this.finderForCard = finderForCard;

@@ -1,4 +1,4 @@
-class CardList {
+export class CardList {
   constructor(name, link, container, api, popup, form, createCard) {
     this.name = name;
     this.link = link;

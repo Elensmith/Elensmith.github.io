@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackMd5Hash = require("webpack-md5-hash");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // добавили плагин
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 // подключаем плагин
 const isDev = process.env.NODE_ENV === "development";
@@ -25,13 +25,21 @@ module.exports = {
         test: /\.(eot|ttf|woff|woff2)$/,
         loader: "file-loader?name=./vendor/[name].[ext]",
       },
+
       {
         test: /\.css$/i,
         use: [
           isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-        ], // добавили минификацию CSS
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 2,
+            },
+          },
+          {
+            loader: "postcss-loader",
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,

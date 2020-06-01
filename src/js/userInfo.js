@@ -1,4 +1,4 @@
-class UserInfo {
+export class UserInfo {
   constructor(nameBox, infoBox, name, job, api, avatar, popup1, form) {
     this.form = form;
     this.popup1 = popup1;

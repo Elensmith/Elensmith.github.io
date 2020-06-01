@@ -1,4 +1,4 @@
-class Popup {
+export class Popup {
   constructor(popup) {
     this.popup = popup;
     this.open = this.open.bind(this);
@@ -15,7 +15,7 @@ class Popup {
 
 // Можно лучше: Каждый отдельный класс лучше хранить в отдельном файле,
 // так улучшится навигация по коду, будет проще его найти.
-class Photo extends Popup {
+export class Photo extends Popup {
   constructor(popup, card) {
     super(popup);
     this.card = card;

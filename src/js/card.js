@@ -1,4 +1,4 @@
-class Card {
+export class Card {
   constructor(name, link, toBigPicture, finderForCard, api) {
     this.api = api;
     this.finderForCard = finderForCard;
@@ -47,9 +47,7 @@ class Card {
           <h3 class="place-card__name">${this.controlText(
             this.name
           )}</h3><div class="place-card__like"> 
-          <button class="place-card__like-icon"></button><div class="place-card__likes-amount">${
-            this.name
-          }</div></div>
+          <button class="place-card__like-icon"></button></div>
           </div>
           </div>`;
   }
@@ -73,3 +71,21 @@ class Card {
       .addEventListener("click", this.toBigPicture(cardElement));
   }
 }
+
+// create() { // тут попытка показать количество лайков
+//   return `<div class="place-card" id='${this.name}'>
+//         <div class="place-card__image" style="background-image: url(${this.controlText(
+//           this.link
+//         )}">
+//         <button class="place-card__delete-icon" id='delete-icon'></button>
+//         </div>
+//         <div class="place-card__description">
+//         <h3 class="place-card__name">${this.controlText(
+//           this.name
+//         )}</h3><div class="place-card__like">
+//         <button class="place-card__like-icon"></button><div class="place-card__likes-amount">${
+//           this.name
+//         }</div></div>
+//         </div>
+//         </div>`;
+// }

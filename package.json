@@ -1,7 +1,7 @@
 {
   "name": "sprint9",
-  "version": "0.0.1",
-  "description": "sprint11",
+  "version": "1.0.1",
+  "description": "mesto frontend sprint11",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",

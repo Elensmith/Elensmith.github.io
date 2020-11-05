@@ -6,7 +6,7 @@ export class Api {
   getUserInfo() {
     return fetch(`${this.mainURL.baseUrl}/users/me`, {
       headers: {
-        authorization: "20aa37b8-af35-4444-8adb-a17a8be26cc2",
+        // authorization: "20aa37b8-af35-4444-8adb-a17a8be26cc2",
         "Content-Type": "application/json",
       },
     })
@@ -25,7 +25,7 @@ export class Api {
     return fetch(`${this.mainURL.baseUrl}/users/me`, {
       method: "PATCH",
       headers: {
-        authorization: "20aa37b8-af35-4444-8adb-a17a8be26cc2",
+        // authorization: "20aa37b8-af35-4444-8adb-a17a8be26cc2",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -48,7 +48,7 @@ export class Api {
   getCards() {
     return fetch(`${this.mainURL.baseUrl}/cards`, {
       headers: {
-        authorization: "20aa37b8-af35-4444-8adb-a17a8be26cc2",
+        // authorization: "20aa37b8-af35-4444-8adb-a17a8be26cc2",
         "Content-Type": "application/json",
       },
     })
@@ -66,7 +66,7 @@ export class Api {
     return fetch(`${this.mainURL.baseUrl}/cards`, {
       method: "POST",
       headers: {
-        authorization: "20aa37b8-af35-4444-8adb-a17a8be26cc2",
+        // authorization: "20aa37b8-af35-4444-8adb-a17a8be26cc2",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({

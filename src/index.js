@@ -28,11 +28,14 @@ import { Api } from "./js/api.js";
   const avatar = document.querySelector(".user-info__photo");
   const toBigPicture = (card) => new Photo(imageOpen, card).magic;
   const mainUrl = {
-    baseUrl:
-      NODE_ENV === "development"
-        ? "http://praktikum.tk/cohort10"
-        : "https://praktikum.tk/cohort10",
+    baseUrl: "http://localhost:8080",
   };
+  // const mainUrl = {
+  //   baseUrl:
+  //     NODE_ENV === "development"
+  //       ? "http://praktikum.tk/cohort10"
+  //       : "https://praktikum.tk/cohort10",
+  // };
   const api = new Api(mainUrl);
   const finderForCard = (id) => document.getElementById(id);
   const popup = new Popup(buttonOpen);
